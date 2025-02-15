@@ -14,7 +14,7 @@ db = mongo_client["remus"]
 
 collection = db["tweets"]
 
-screen_name = "swiggy"
+screen_name = "letsblinkit"
 
 def get_user_id_from_screen_name(screen_name, headers):
     get_userid_url = 'https://x.com/i/api/graphql/32pL5BWe9WKeSK1MoPvFQQ/UserByScreenName?'
@@ -42,8 +42,8 @@ def get_user_id_from_screen_name(screen_name, headers):
 
 headers = {
     "authorization": "Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA",
-    "cookie": 'guest_id=173928575765340530; night_mode=2; guest_id_marketing=v1%3A173928575765340530; guest_id_ads=v1%3A173928575765340530; gt=1889327524989247614; _twitter_sess=BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%250ASGFzaHsABjoKQHVzZWR7AA%253D%253D--1164b91ac812d853b877e93ddb612b7471bebc74; kdt=HEbCyPxa6nekqpXh9Qhwdb3dWpx40XMBJWRuVpaQ; auth_token=93302e82381528f3f020402afebedcb878acd169; ct0=30df35c5e075c83be9fe98c3aa50559513ecf66edfd72729c772f51db35e632d8789813efa0b928ecd174f40023170b5e19dd1213cf10b29456fc8241265ddd1245bd2591800abf4bc99266dceeece92; lang=en; twid=u%3D1889328472344117248; personalization_id="v1_aiC/jbBd2ya6iAXfAdaJtQ=="',
-    "x-csrf-token": "30df35c5e075c83be9fe98c3aa50559513ecf66edfd72729c772f51db35e632d8789813efa0b928ecd174f40023170b5e19dd1213cf10b29456fc8241265ddd1245bd2591800abf4bc99266dceeece92"
+    "cookie": 'night_mode=2; kdt=HEbCyPxa6nekqpXh9Qhwdb3dWpx40XMBJWRuVpaQ; lang=en; _ga=GA1.1.1547864365.1739287225; _ga_RJGMY4G45L=GS1.1.1739287225.1.1.1739287258.27.0.0; ph_phc_TXdpocbGVeZVm5VJmAsHTMrCofBQu3e0kN8HGMNGTVW_posthog=%7B%22distinct_id%22%3A%220194f599-69fb-7f54-86ca-c4fc03b588ad%22%2C%22%24sesid%22%3A%5B1739287270897%2C%220194f599-69fa-7e74-9d7b-a05689ddc5f8%22%2C1739287259642%5D%7D; dnt=1; guest_id=v1%3A173942711626061845; guest_id_marketing=v1%3A173942711626061845; guest_id_ads=v1%3A173942711626061845; auth_token=d5a259b01518ca773791ceac6708f1ed26028d52; ct0=7c43ced97ab676d885d67df4e2de2b54054dd1d73bbe1602558f565595039ac78e3ac1a6b9e4c05729af1f267a76b9a3a2b47d53545561458c394300c6d5e500459d92c2b25e2052e226c3e1ccf13a8f; twid=u%3D1889920480758370304; personalization_id="v1_aiC/jbBd2ya6iAXfAdaJtQ=="',
+    "x-csrf-token": "7c43ced97ab676d885d67df4e2de2b54054dd1d73bbe1602558f565595039ac78e3ac1a6b9e4c05729af1f267a76b9a3a2b47d53545561458c394300c6d5e500459d92c2b25e2052e226c3e1ccf13a8f"
 }
 
 user_id = get_user_id_from_screen_name(screen_name, headers)
