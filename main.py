@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import urllib.parse
 import json
 import certifi
+from datetime import datetime
 
 load_dotenv()
 
@@ -14,7 +15,7 @@ db = mongo_client["remus"]
 
 collection = db["tweets"]
 
-screen_name = "letsblinkit"
+screen_name = "Wendys"
 
 def get_user_id_from_screen_name(screen_name, headers):
     get_userid_url = 'https://x.com/i/api/graphql/32pL5BWe9WKeSK1MoPvFQQ/UserByScreenName?'
@@ -133,6 +134,7 @@ while run:
                                 existing["quote_count"] = quote_count
                                 existing["reply_count"] = reply_count
                                 existing["retweet_count"] = retweet_count
+                                existing["updated_at"] = datetime.now()
 
                                 collection.replace_one({
                                     "_id": existing["_id"]
@@ -151,7 +153,8 @@ while run:
                                 "favorite_count": favorite_count,
                                 "quote_count": quote_count,
                                 "reply_count": reply_count,
-                                "retweet_count": retweet_count
+                                "retweet_count": retweet_count,
+                                "updated_at": datetime.now()
                             })
                             print("new tweet added")
 
