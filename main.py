@@ -31,6 +31,29 @@ MAX_RETRY_DELAY = 300  # Maximum retry delay (5 minutes)
 # File to store tweets
 TWEETS_FILE = "tweets.json"
 
+def log_error(error_msg):
+    """Log error to a file instead of printing"""
+    with open('scraper_errors.log', 'a') as f:
+        f.write(f"{datetime.now().isoformat()}: {error_msg}\n")
+
+def is_retryable_error(error_msg):
+    """Check if error is worth retrying"""
+    retryable_errors = [
+        "429",  # Too many requests
+        "401",  # Auth error
+        "503",  # Service unavailable
+        "502",  # Bad gateway
+        "504",  # Gateway timeout
+        "Connection refused",
+        "Connection reset",
+        "Connection timed out",
+        "Too Many Requests",
+        "rate limit",
+        "timeout"
+    ]
+    error_msg = str(error_msg).lower()
+    return any(err.lower() in error_msg for err in retryable_errors)
+
 def load_tweets():
     """Load existing tweets from file, create file if doesn't exist"""
     try:
@@ -52,29 +75,32 @@ def save_tweets(tweets):
 def get_user_id_from_screen_name(screen_name, headers):
     """Get Twitter user ID from screen name"""
     get_userid_url = USER_BY_SCREEN_NAME_URL
-
     get_user_id_variables = {
         "screen_name": screen_name.lstrip('@')
     }
-
-    get_user_id_features = '%7B%22hidden_profile_subscriptions_enabled%22%3Atrue%2C%22profile_label_improvements_pcf_label_in_post_enabled%22%3Atrue%2C%22rweb_tipjar_consumption_enabled%22%3Atrue%2C%22responsive_web_graphql_exclude_directive_enabled%22%3Atrue%2C%22verified_phone_label_enabled%22%3Atrue%2C%22subscriptions_verification_info_is_identity_verified_enabled%22%3Atrue%2C%22subscriptions_verification_info_verified_since_enabled%22%3Atrue%2C%22highlights_tweets_tab_ui_enabled%22%3Atrue%2C%22responsive_web_twitter_article_notes_tab_enabled%22%3Atrue%2C%22subscriptions_feature_can_gift_premium%22%3Atrue%2C%22creator_subscriptions_tweet_preview_api_enabled%22%3Atrue%2C%22responsive_web_graphql_skip_user_profile_image_extensions_enabled%22%3Afalse%2C%22responsive_web_graphql_timeline_navigation_enabled%22%3Atrue%7D'
-
-    field_toggles = '%7B%22withAuxiliaryUserLabels%22%3Afalse%7D'
-
     variables_encoded = urllib.parse.quote(str(json.dumps(get_user_id_variables, separators=(',', ':'))))
-
     get_userid_url = f"{get_userid_url}variables={variables_encoded}&features={get_user_id_features}&field_toggles={field_toggles}"
 
-    print(f"Getting user ID for {screen_name}")
-    response = requests.get(get_userid_url, headers=headers)
-
-    if response.status_code == 200:
-        data = response.json()
-        user_id = data["data"]["user"]["result"]["rest_id"]
-        print(f"Found user ID: {user_id}")
-        return user_id
-    else:
-        print(f"Failed to get user ID. Status code: {response.status_code}")
+    try:
+        response = requests.get(get_userid_url, headers=headers)
+        if response.status_code == 200:
+            data = response.json()
+            if "data" in data and "user" in data["data"]:
+                user_id = data["data"]["user"]["result"]["rest_id"]
+                return user_id
+            else:
+                log_error(f"User data not found for {screen_name}")
+                return None
+        else:
+            error_msg = f"Failed to get user ID. Status code: {response.status_code}"
+            log_error(error_msg)
+            if is_retryable_error(error_msg):
+                raise Exception(error_msg)  # Will trigger retry
+            return None
+    except Exception as e:
+        if is_retryable_error(str(e)):
+            raise  # Re-raise for retry
+        log_error(f"Error getting user ID for {screen_name}: {str(e)}")
         return None
 
 def is_valid_tweet_format(tweet_data):
@@ -107,73 +133,56 @@ def is_valid_tweet_format(tweet_data):
 
 def get_tweet_with_retry(entry, screen_name, headers, start_time):
     """Get tweet data with retry mechanism for invalid format"""
-    retry_delay = INITIAL_RETRY_DELAY
-    retry_count = 0
-    max_retries = 5  # Maximum number of retries per tweet
-    
-    while retry_count < max_retries:
-        try:
-            tweet_result = entry["content"]["itemContent"]["tweet_results"]["result"]
-            tweet_id = tweet_result["rest_id"]
-            
-            # Try to get view count, default to 0 if not available
-            try:
-                views_count = tweet_result.get("views", {}).get("count", 0)
-                views_count = int(views_count) if isinstance(views_count, str) else views_count
-            except (KeyError, TypeError):
-                views_count = 0
-            
-            legacy = tweet_result["legacy"]
-            
-            tweet_data = {
-                "account": screen_name,
-                "tweetId": tweet_id,
-                "tweet_text": legacy["full_text"],
-                "views": views_count,
-                "tweet_created_at": legacy["created_at"],
-                "hashtags": legacy["entities"]["hashtags"],
-                "favorite_count": legacy["favorite_count"],
-                "quote_count": legacy["quote_count"],
-                "reply_count": legacy["reply_count"],
-                "retweet_count": legacy["retweet_count"],
-                "engagement_score": legacy["favorite_count"] + legacy["retweet_count"] * 2 + legacy["reply_count"] * 3  # Custom engagement score
-            }
-            
-            if is_valid_tweet_format(tweet_data):
-                # Get replies for valid tweet
-                print(f"Fetching replies for tweet {tweet_id}")
-                replies = get_tweet_replies(tweet_id, headers)
-                # Initialize empty list if replies is None
-                replies = replies if replies is not None else []
-                tweet_data["replies"] = replies
-                print(f"Found {len(replies)} replies")
-                return tweet_data
-            else:
-                print(f"Invalid tweet format, attempt {retry_count + 1}/{max_retries}")
-                
-                # Check if we've exceeded maximum wait time
-                if (datetime.now() - start_time).total_seconds() > MAX_WAIT_TIME:
-                    print("Exceeded maximum wait time (10 minutes). Terminating program.")
-                    return None
-                
-                # Wait with exponential backoff
-                print(f"Waiting {retry_delay} seconds before retry...")
-                time.sleep(retry_delay)
-                retry_delay = min(retry_delay * 2, MAX_RETRY_DELAY)
-                retry_count += 1
+    try:
+        tweet_content = entry.get("content", {})
+        item_content = tweet_content.get("itemContent", {})
+        tweet_results = item_content.get("tweet_results", {})
+        tweet_result = tweet_results.get("result", {})
         
-        except Exception as e:
-            print(f"Error processing tweet: {e}")
-            if (datetime.now() - start_time).total_seconds() > MAX_WAIT_TIME:
-                print("Exceeded maximum wait time (10 minutes). Terminating program.")
-                return None
-            print(f"Waiting {retry_delay} seconds before retry...")
-            time.sleep(retry_delay)
-            retry_delay = min(retry_delay * 2, MAX_RETRY_DELAY)
-            retry_count += 1
-    
-    print("Maximum retry attempts reached for tweet")
-    return None
+        if not tweet_result:
+            return None
+            
+        tweet_id = tweet_result.get("rest_id")
+        if not tweet_id:
+            return None
+        
+        views_count = tweet_result.get("views", {}).get("count", 0)
+        views_count = int(views_count) if isinstance(views_count, str) else views_count
+        
+        legacy = tweet_result.get("legacy", {})
+        if not legacy:
+            return None
+        
+        tweet_data = {
+            "account": screen_name,
+            "tweetId": tweet_id,
+            "tweet_text": legacy.get("full_text", ""),
+            "views": views_count,
+            "tweet_created_at": legacy.get("created_at", ""),
+            "hashtags": legacy.get("entities", {}).get("hashtags", []),
+            "favorite_count": legacy.get("favorite_count", 0),
+            "quote_count": legacy.get("quote_count", 0),
+            "reply_count": legacy.get("reply_count", 0),
+            "retweet_count": legacy.get("retweet_count", 0),
+            "engagement_score": (
+                legacy.get("favorite_count", 0) + 
+                legacy.get("retweet_count", 0) * 2 + 
+                legacy.get("reply_count", 0) * 3
+            )
+        }
+        
+        if is_valid_tweet_format(tweet_data):
+            replies = get_tweet_replies(tweet_id, headers)
+            tweet_data["replies"] = replies if replies is not None else []
+            return tweet_data
+            
+        return None
+        
+    except Exception as e:
+        if is_retryable_error(str(e)):
+            raise  # Re-raise for retry
+        log_error(f"Error processing tweet: {str(e)}")
+        return None
 
 def get_tweet_replies(tweet_id, headers):
     """Fetch replies for a specific tweet"""
@@ -427,89 +436,107 @@ def get_next_brand_to_scrape():
 
 def main():
     while True:
-        brand_name, handle = get_next_brand_to_scrape()
-        if not brand_name:
-            print("No more brands to scrape")
-            break
-            
-        print(f"Starting to scrape {handle}")
-        user_id = get_user_id_from_screen_name(handle, TWITTER_HEADERS)
-        if not user_id:
-            continue
-
-        tweets_processed = 0
-        variables = {
-            "userId": user_id,
-            "count": 40,
-            "includePromotedContent": False,
-            "withHighlightedLabel": True,
-            "withQuickPromoteEligibilityTweetFields": True,
-            "withVoice": True,
-            "withV2Timeline": True
-        }
-
-        features_json = json.dumps(DEFAULT_TWEET_FEATURES)
-        encoded_features = urllib.parse.quote(str(features_json), safe='/')
-        
-        run = True
-        start_time = datetime.now()
-
-        while run and tweets_processed < MAX_TWEETS_PER_ACCOUNT:
+        try:
+            brand_name, handle = get_next_brand_to_scrape()
+            if not brand_name:
+                print("Completed scraping all brands")
+                break
+                
+            print(f"Processing {handle}...")
             try:
-                if (datetime.now() - start_time).total_seconds() > NO_TWEETS_TIMEOUT:
-                    print("No tweets received for 15 minutes. Moving to next brand...")
-                    break
-
-                encoded_variables = urllib.parse.quote(str(json.dumps(variables, separators=(',', ':'))))
-                api_url = f"{USER_TWEETS_URL}variables={encoded_variables}&features={encoded_features}"
-
-                response = requests.get(api_url, headers=TWITTER_HEADERS)
-                print(f"Response status: {response.status_code}")
-
-                if response.status_code == 200:
-                    data = response.json()
-                    new_tweets_found = False
-
-                    instructions = data["data"]["user"]["result"]["timeline_v2"]["timeline"]["instructions"]
-                    for instruction in instructions:
-                        if instruction["type"] == "TimelineAddEntries":
-                            entries = instruction["entries"]
-                            for entry in entries:
-                                if entry["entryId"].startswith("tweet-"):
-                                    if tweets_processed >= MAX_TWEETS_PER_ACCOUNT:
-                                        run = False
-                                        break
-                                        
-                                    time.sleep(BASE_DELAY)
-                                    tweet_data = get_tweet_with_retry(entry, handle.lstrip('@'), TWITTER_HEADERS, start_time)
-                                    if tweet_data:
-                                        save_tweet(tweet_data)
-                                        tweets_processed += 1
-                                        new_tweets_found = True
-                                        print(f"Processed {tweets_processed}/{MAX_TWEETS_PER_ACCOUNT} tweets for {handle}")
-                                
-                                elif entry["entryId"].startswith("cursor-bottom"):
-                                    variables["cursor"] = entry["content"]["value"]
-                            
-                            if not new_tweets_found:
-                                print("No new tweets found in this batch")
-                                run = False
+                retry_count = 0
+                while retry_count < 3:  # Max 3 retries for retryable errors
+                    try:
+                        user_id = get_user_id_from_screen_name(handle, TWITTER_HEADERS)
+                        if not user_id:
+                            print(f"Skipping {handle} - Could not get user ID")
+                            update_brand_status(brand_name, 0)
                             break
-                else:
-                    print(f"Request failed with status code: {response.status_code}")
-                    if (datetime.now() - start_time).total_seconds() > MAX_WAIT_TIME:
+
+                        tweets_processed = 0
+                        variables = {
+                            "userId": user_id,
+                            "count": 40,
+                            "includePromotedContent": False,
+                            "withHighlightedLabel": True,
+                            "withQuickPromoteEligibilityTweetFields": True,
+                            "withVoice": True,
+                            "withV2Timeline": True
+                        }
+
+                        features_json = json.dumps(DEFAULT_TWEET_FEATURES)
+                        encoded_features = urllib.parse.quote(str(features_json), safe='/')
+                        
+                        run = True
+                        start_time = datetime.now()
+
+                        while run and tweets_processed < MAX_TWEETS_PER_ACCOUNT:
+                            if (datetime.now() - start_time).total_seconds() > NO_TWEETS_TIMEOUT:
+                                break
+
+                            encoded_variables = urllib.parse.quote(str(json.dumps(variables, separators=(',', ':'))))
+                            api_url = f"{USER_TWEETS_URL}variables={encoded_variables}&features={encoded_features}"
+
+                            response = requests.get(api_url, headers=TWITTER_HEADERS)
+                            
+                            if response.status_code != 200:
+                                if is_retryable_error(str(response.status_code)):
+                                    raise Exception(f"HTTP {response.status_code}")
+                                break
+
+                            data = response.json()
+                            new_tweets_found = False
+                            instructions = data.get("data", {}).get("user", {}).get("result", {}).get("timeline_v2", {}).get("timeline", {}).get("instructions", [])
+
+                            for instruction in instructions:
+                                if instruction.get("type") == "TimelineAddEntries":
+                                    entries = instruction.get("entries", [])
+                                    for entry in entries:
+                                        if entry.get("entryId", "").startswith("tweet-"):
+                                            if tweets_processed >= MAX_TWEETS_PER_ACCOUNT:
+                                                run = False
+                                                break
+                                                
+                                            time.sleep(BASE_DELAY)
+                                            tweet_data = get_tweet_with_retry(entry, handle.lstrip('@'), TWITTER_HEADERS, start_time)
+                                            if tweet_data:
+                                                save_tweet(tweet_data)
+                                                tweets_processed += 1
+                                                new_tweets_found = True
+                                                print(f"{handle}: {tweets_processed}/{MAX_TWEETS_PER_ACCOUNT} tweets", end='\r')
+                                        
+                                        elif entry.get("entryId", "").startswith("cursor-bottom"):
+                                            variables["cursor"] = entry.get("content", {}).get("value")
+                                    
+                                    if not new_tweets_found:
+                                        run = False
+                                    break
+
+                        print(f"\nCompleted {handle} with {tweets_processed} tweets")
+                        update_brand_status(brand_name, tweets_processed)
+                        break  # Success, exit retry loop
+                        
+                    except Exception as e:
+                        if is_retryable_error(str(e)):
+                            retry_count += 1
+                            if retry_count < 3:
+                                wait_time = INITIAL_RETRY_DELAY * (2 ** retry_count)
+                                print(f"Retryable error for {handle}, waiting {wait_time}s...")
+                                time.sleep(wait_time)
+                                continue
+                        log_error(f"Error processing {handle}: {str(e)}")
+                        update_brand_status(brand_name, tweets_processed if 'tweets_processed' in locals() else 0)
                         break
-                    time.sleep(INITIAL_RETRY_DELAY)
 
             except Exception as e:
-                print(f"Error occurred: {e}")
-                if (datetime.now() - start_time).total_seconds() > MAX_WAIT_TIME:
-                    break
-                time.sleep(INITIAL_RETRY_DELAY)
+                log_error(f"Major error processing {handle}: {str(e)}")
+                update_brand_status(brand_name, tweets_processed if 'tweets_processed' in locals() else 0)
+                continue
 
-        # Update brand status after processing
-        update_brand_status(brand_name, tweets_processed)
-        print(f"Completed scraping {handle} with {tweets_processed} tweets")
+        except Exception as e:
+            log_error(f"Critical error in main loop: {str(e)}")
+            time.sleep(INITIAL_RETRY_DELAY)
+            continue
 
 if __name__ == "__main__":
     main()

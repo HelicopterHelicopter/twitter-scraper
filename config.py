@@ -15,7 +15,7 @@ TWEETS_FILE = "tweets.json"
 BRANDS_FILE = "brands.json"  # Combined brands file
 
 # Scraping limits
-MAX_TWEETS_PER_ACCOUNT = 100  # Maximum tweets to scrape per account
+MAX_TWEETS_PER_ACCOUNT = 50  # Maximum tweets to scrape per account
 
 # Retry mechanism constants
 BASE_DELAY = 5  # Base delay between tweets

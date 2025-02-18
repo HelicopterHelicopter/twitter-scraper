@@ -1,653 +1,653 @@
 {
-    "TataCompanies": {
-        "handle": "@TataCompanies",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "reliancejio": {
-        "handle": "@reliancejio",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "airtelindia": {
-        "handle": "@airtelindia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "HeroMotoCorp": {
-        "handle": "@HeroMotoCorp",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "Infosys": {
-        "handle": "@Infosys",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "TCS": {
-        "handle": "@TCS",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "wipro": {
-        "handle": "@wipro",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "HDFC_Bank": {
-        "handle": "@HDFC_Bank",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "TheOfficialSBI": {
-        "handle": "@TheOfficialSBI",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ICICIBank": {
-        "handle": "@ICICIBank",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "Flipkart": {
-        "handle": "@Flipkart",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "amazonIN": {
-        "handle": "@amazonIN",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "Nykaa": {
-        "handle": "@Nykaa",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "myntra": {
-        "handle": "@myntra",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "Swiggy": {
-        "handle": "@Swiggy",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ZomatoIN": {
-        "handle": "@ZomatoIN",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "OYOIndia": {
-        "handle": "@OYOIndia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "MakeMyTrip": {
-        "handle": "@MakeMyTrip",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "IndiGo6E": {
-        "handle": "@IndiGo6E",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "airvistara": {
-        "handle": "@airvistara",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "HyundaiIndia": {
-        "handle": "@HyundaiIndia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "TataMotors": {
-        "handle": "@TataMotors",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "MahindraRise": {
-        "handle": "@MahindraRise",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "MarutiSuzuki": {
-        "handle": "@MarutiSuzuki",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "BajajAuto": {
-        "handle": "@BajajAuto",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "TVSMotor": {
-        "handle": "@TVSMotor",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "royalenfield": {
-        "handle": "@royalenfield",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "SamsungIndia": {
-        "handle": "@SamsungIndia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "realmeindia": {
-        "handle": "@realmeindia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "Xiaomi": {
-        "handle": "@Xiaomi",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "DaburIndia": {
-        "handle": "@DaburIndia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "HUL_News": {
-        "handle": "@HUL_News",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ITC_Limited": {
-        "handle": "@ITC_Limited",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "NestleIndia": {
-        "handle": "@NestleIndia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "PepsiIndia": {
-        "handle": "@PepsiIndia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "CocaCola_Ind": {
-        "handle": "@CocaCola_Ind",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ParleFamily": {
-        "handle": "@ParleFamily",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "BritanniaCare": {
-        "handle": "@BritanniaCare",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "AmulIndia": {
-        "handle": "@AmulIndia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "McDonaldsIndia": {
-        "handle": "@McDonaldsIndia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "dominos_india": {
-        "handle": "@dominos_india",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "RelianceRetail": {
-        "handle": "@RelianceRetail",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "DMartRetail": {
-        "handle": "@DMartRetail",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "BigBazaar": {
-        "handle": "@BigBazaar",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ShopperStop": {
-        "handle": "@ShopperStop",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "TanishqJewelry": {
-        "handle": "@TanishqJewelry",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "PCJeweller": {
-        "handle": "@PCJeweller",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ZeeTV": {
-        "handle": "@ZeeTV",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "SonyTV": {
-        "handle": "@SonyTV",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "StarPlus": {
-        "handle": "@StarPlus",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ColorsTV": {
-        "handle": "@ColorsTV",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "TimesNow": {
-        "handle": "@TimesNow",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ndtv": {
-        "handle": "@ndtv",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "IndiaToday": {
-        "handle": "@IndiaToday",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "republic": {
-        "handle": "@republic",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ZeeNews": {
-        "handle": "@ZeeNews",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ABPNews": {
-        "handle": "@ABPNews",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "aajtak": {
-        "handle": "@aajtak",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "ETNOWlive": {
-        "handle": "@ETNOWlive",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "BloombergQuint": {
-        "handle": "@BloombergQuint",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "CNBCTV18News": {
-        "handle": "@CNBCTV18News",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "DDNewsLive": {
-        "handle": "@DDNewsLive",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "htTweets": {
-        "handle": "@htTweets",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "timesofindia": {
-        "handle": "@timesofindia",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "IndianExpress": {
-        "handle": "@IndianExpress",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "the_hindu": {
-        "handle": "@the_hindu",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "EconomicTimes": {
-        "handle": "@EconomicTimes",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "business_line": {
-        "handle": "@business_line",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "mint": {
-        "handle": "@mint",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": true
-    },
-    "Apple": {
-        "handle": "@Apple",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Microsoft": {
-        "handle": "@Microsoft",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Google": {
-        "handle": "@Google",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Amazon": {
-        "handle": "@Amazon",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Meta": {
-        "handle": "@Meta",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Netflix": {
-        "handle": "@Netflix",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Disney": {
-        "handle": "@Disney",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Spotify": {
-        "handle": "@Spotify",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Nike": {
-        "handle": "@Nike",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Adidas": {
-        "handle": "@adidas",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "CocaCola": {
-        "handle": "@CocaCola",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "PepsiCo": {
-        "handle": "@PepsiCo",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "McDonalds": {
-        "handle": "@McDonalds",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Starbucks": {
-        "handle": "@Starbucks",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "BMW": {
-        "handle": "@BMW",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "MercedesBenz": {
-        "handle": "@MercedesBenz",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Toyota": {
-        "handle": "@Toyota",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Honda": {
-        "handle": "@Honda",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Shell": {
-        "handle": "@Shell",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "BP": {
-        "handle": "@BP_plc",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Visa": {
-        "handle": "@Visa",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Mastercard": {
-        "handle": "@Mastercard",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "PayPal": {
-        "handle": "@PayPal",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    },
-    "Samsung": {
-        "handle": "@Samsung",
-        "is_scraped": false,
-        "last_scraped": null,
-        "tweets_scraped": 0,
-        "is_indian": false
-    }
-} 
+  "TataCompanies": {
+    "handle": "@TataCompanies",
+    "is_scraped": true,
+    "last_scraped": "2025-02-17T21:55:19.798371",
+    "tweets_scraped": 100,
+    "is_indian": true
+  },
+  "reliancejio": {
+    "handle": "@reliancejio",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T10:15:30.932694",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "airtelindia": {
+    "handle": "@airtelindia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T10:20:33.691826",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "HeroMotoCorp": {
+    "handle": "@HeroMotoCorp",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T10:25:36.834431",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "Infosys": {
+    "handle": "@Infosys",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T10:43:06.033218",
+    "tweets_scraped": 25,
+    "is_indian": true
+  },
+  "TCS": {
+    "handle": "@TCS",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T10:48:08.007290",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "wipro": {
+    "handle": "@wipro",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T10:53:12.296707",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "HDFC_Bank": {
+    "handle": "@HDFC_Bank",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T11:09:26.998989",
+    "tweets_scraped": 35,
+    "is_indian": true
+  },
+  "TheOfficialSBI": {
+    "handle": "@TheOfficialSBI",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T11:29:33.032703",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "ICICIBank": {
+    "handle": "@ICICIBank",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T12:16:30.654969",
+    "tweets_scraped": 2,
+    "is_indian": true
+  },
+  "Flipkart": {
+    "handle": "@Flipkart",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T12:48:05.008347",
+    "tweets_scraped": 15,
+    "is_indian": true
+  },
+  "amazonIN": {
+    "handle": "@amazonIN",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T13:03:57.649595",
+    "tweets_scraped": 8,
+    "is_indian": true
+  },
+  "Nykaa": {
+    "handle": "@Nykaa",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T13:03:59.205313",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "myntra": {
+    "handle": "@myntra",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T19:02:07.999384",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "Swiggy": {
+    "handle": "@Swiggy",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T19:07:35.177886",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "ZomatoIN": {
+    "handle": "@ZomatoIN",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T19:12:40.163780",
+    "tweets_scraped": 50,
+    "is_indian": true
+  },
+  "OYOIndia": {
+    "handle": "@OYOIndia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T19:57:41.429774",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "MakeMyTrip": {
+    "handle": "@MakeMyTrip",
+    "is_scraped": true,
+    "last_scraped": null,
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "IndiGo6E": {
+    "handle": "@IndiGo6E",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.085891",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "airvistara": {
+    "handle": "@airvistara",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.086554",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "HyundaiIndia": {
+    "handle": "@HyundaiIndia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.087156",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "TataMotors": {
+    "handle": "@TataMotors",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.087749",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "MahindraRise": {
+    "handle": "@MahindraRise",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.088322",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "MarutiSuzuki": {
+    "handle": "@MarutiSuzuki",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.088900",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "BajajAuto": {
+    "handle": "@BajajAuto",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.089476",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "TVSMotor": {
+    "handle": "@TVSMotor",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.090035",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "royalenfield": {
+    "handle": "@royalenfield",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.090713",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "SamsungIndia": {
+    "handle": "@SamsungIndia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.091361",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "realmeindia": {
+    "handle": "@realmeindia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.092118",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "Xiaomi": {
+    "handle": "@Xiaomi",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.093014",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "DaburIndia": {
+    "handle": "@DaburIndia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.093777",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "HUL_News": {
+    "handle": "@HUL_News",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.094443",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ITC_Limited": {
+    "handle": "@ITC_Limited",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.095309",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "NestleIndia": {
+    "handle": "@NestleIndia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.096330",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "PepsiIndia": {
+    "handle": "@PepsiIndia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.097114",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "CocaCola_Ind": {
+    "handle": "@CocaCola_Ind",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.097781",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ParleFamily": {
+    "handle": "@ParleFamily",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.098398",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "BritanniaCare": {
+    "handle": "@BritanniaCare",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.099125",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "AmulIndia": {
+    "handle": "@AmulIndia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.099724",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "McDonaldsIndia": {
+    "handle": "@McDonaldsIndia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.100362",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "dominos_india": {
+    "handle": "@dominos_india",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.101097",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "RelianceRetail": {
+    "handle": "@RelianceRetail",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.101833",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "DMartRetail": {
+    "handle": "@DMartRetail",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.102534",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "BigBazaar": {
+    "handle": "@BigBazaar",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.103117",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ShopperStop": {
+    "handle": "@ShopperStop",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.103693",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "TanishqJewelry": {
+    "handle": "@TanishqJewelry",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.104270",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "PCJeweller": {
+    "handle": "@PCJeweller",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.104839",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ZeeTV": {
+    "handle": "@ZeeTV",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.105467",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "SonyTV": {
+    "handle": "@SonyTV",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.106154",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "StarPlus": {
+    "handle": "@StarPlus",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.106775",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ColorsTV": {
+    "handle": "@ColorsTV",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.107369",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "TimesNow": {
+    "handle": "@TimesNow",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.107954",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ndtv": {
+    "handle": "@ndtv",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.108593",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "IndiaToday": {
+    "handle": "@IndiaToday",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.109191",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "republic": {
+    "handle": "@republic",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.109880",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ZeeNews": {
+    "handle": "@ZeeNews",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.110604",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ABPNews": {
+    "handle": "@ABPNews",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.111297",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "aajtak": {
+    "handle": "@aajtak",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.111946",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "ETNOWlive": {
+    "handle": "@ETNOWlive",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.112627",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "BloombergQuint": {
+    "handle": "@BloombergQuint",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.113233",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "CNBCTV18News": {
+    "handle": "@CNBCTV18News",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.113907",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "DDNewsLive": {
+    "handle": "@DDNewsLive",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.114543",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "htTweets": {
+    "handle": "@htTweets",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.115156",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "timesofindia": {
+    "handle": "@timesofindia",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.115750",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "IndianExpress": {
+    "handle": "@IndianExpress",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.116322",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "the_hindu": {
+    "handle": "@the_hindu",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.116890",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "EconomicTimes": {
+    "handle": "@EconomicTimes",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.117462",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "business_line": {
+    "handle": "@business_line",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.118027",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "mint": {
+    "handle": "@mint",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.118625",
+    "tweets_scraped": 0,
+    "is_indian": true
+  },
+  "Apple": {
+    "handle": "@Apple",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.119221",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Microsoft": {
+    "handle": "@Microsoft",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.119795",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Google": {
+    "handle": "@Google",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.120453",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Amazon": {
+    "handle": "@Amazon",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.121066",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Meta": {
+    "handle": "@Meta",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.121654",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Netflix": {
+    "handle": "@Netflix",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.122241",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Disney": {
+    "handle": "@Disney",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.122889",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Spotify": {
+    "handle": "@Spotify",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.123472",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Nike": {
+    "handle": "@Nike",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.124054",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Adidas": {
+    "handle": "@adidas",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.124646",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "CocaCola": {
+    "handle": "@CocaCola",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.125259",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "PepsiCo": {
+    "handle": "@PepsiCo",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.126115",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "McDonalds": {
+    "handle": "@McDonalds",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.126926",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Starbucks": {
+    "handle": "@Starbucks",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.127612",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "BMW": {
+    "handle": "@BMW",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.128279",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "MercedesBenz": {
+    "handle": "@MercedesBenz",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.128912",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Toyota": {
+    "handle": "@Toyota",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.129533",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Honda": {
+    "handle": "@Honda",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.130222",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Shell": {
+    "handle": "@Shell",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.130901",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "BP": {
+    "handle": "@BP_plc",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.131496",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Visa": {
+    "handle": "@Visa",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.132195",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Mastercard": {
+    "handle": "@Mastercard",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.132818",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "PayPal": {
+    "handle": "@PayPal",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.133397",
+    "tweets_scraped": 0,
+    "is_indian": false
+  },
+  "Samsung": {
+    "handle": "@Samsung",
+    "is_scraped": true,
+    "last_scraped": "2025-02-18T20:05:27.133983",
+    "tweets_scraped": 0,
+    "is_indian": false
+  }
+}
